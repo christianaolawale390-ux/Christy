@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #333;
+}
+
+/* ---------------- NAVBAR ---------------- */
+nav {
+    width: 100%;
+    padding: 20px 50px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav .nav-logo {
+    width: 90px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d3cc00;
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+    display: flex;
+    height: 550px;
+    width: 100%;
+}
+
+.hero-left {
+    width: 40%;
+    background: #d3cc00;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    width: 90px;
+    margin-bottom: 20px;
+}
+
+.hero-left h1 {
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.hero-left p {
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+/* Right image */
+.hero-right {
+    width: 60%;
+    height: 100%;
+}
+
+.hero-image-card {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------------- ABOUT ---------------- */
+.about {
+    display: flex;
+    padding: 60px;
+    gap: 40px;
+}
+
+.about img {
+    width: 40%;
+    border-radius: 5px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #d3cc00;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+/* Hover effect for button */
+.button:hover {
+    background: #c0b800;
+    transform: scale(1.05);
+}
+
+/* ---------------- SERVICES ---------------- */
+.services {
+    background: #f6f6f6;
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.services h4 {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.service p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ---------------- PROJECTS ---------------- */
+.projects {
+    background: #d3cc00;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 20px auto;
+    width: 85%;
+}
+
+.project-grid img {
+    width: 100%;
+    height: 140px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* ---------------- TESTIMONIALS ---------------- */
+.testimonials {
+    padding: 60px;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.testimonial {
+    width: 32%;
+    background: #fafafa;
+    padding: 20px;
+    border-left: 5px solid #d3cc00;
+}
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+    display: flex;
+    height: 330px;
+    width: 100%;
+}
+
+/* Converted to BACKGROUND image */
+.footer-img {
+    width: 60%;
+    height: 330px;
+    background-image: url("./images/caterpillar.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-text {
+    width: 40%;
+    background: #d3cc00;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-text h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.footer-text p {
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero,
+    .about,
+    .footer {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .hero-left, 
+    .hero-right {
+        width: 100%;
+    }
+
+    .about img,
+    .about-text {
+        width: 100%;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+    }
+    
+    .testimonial {
+        width: 100%;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-img {
+        width: 100%;
+        height: 260px;
+    }
+
+    .footer-text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-grid,
+    .services {
+        grid-template-columns: 1fr;
+    }
+}
